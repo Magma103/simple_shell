@@ -36,6 +36,7 @@
 
 extern char **environ;
 
+
 /**
  * struct liststr - singly linked list
  * @num: the number field
@@ -109,20 +110,6 @@ typedef struct builtin
 	int (*func)(info_t *);
 } builtin_table;
 
-#define INFO_INIT \
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-	0, 0, 0}
-
-/**
- *struct builtin - contains a builtin string and related function
- *@type: the builtin command flag
- *@func: the function
- */
-typedef struct builtin
-{
-	char *type;
-	int (*func)(info_t *);
-} builtin_table;
 
 /* toem_shloop.c */
 int hsh(info_t *, char **);
